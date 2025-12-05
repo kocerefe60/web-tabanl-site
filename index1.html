@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeknoServis - Bilgisayar & Yazılım Hizmetleri</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        html { scroll-behavior: smooth; }
+        
+        /* Kartların üzerine gelince hafif yukarı çıkma efekti */
+        .hover-effect:hover { transform: translateY(-5px); transition: 0.3s; }
+        
+        /* Slayt resimlerinin koyuluğunu ayarlamak için (Yazılar okunsun diye) */
+        .carousel-item img {
+            filter: brightness(0.6); /* Resmi %40 karartır */
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">TeknoServis</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#anaMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="anaMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Anasayfa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#hizmetler">Hizmetler</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#iletisim">İletişim</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="anaSlayt" class="carousel slide mt-5" data-bs-ride="carousel">
+        
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#anaSlayt" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#anaSlayt" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#anaSlayt" data-bs-slide-to="2"></button>
+        </div>
+
+        <div class="carousel-inner">
+            
+            <div class="carousel-item active" data-bs-interval="4000">
+                <img src="https://picsum.photos/id/1/1200/500" class="d-block w-100" alt="Laptop Tamiri">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-4 fw-bold">Profesyonel Bilgisayar Tamiri</h2>
+                    <p class="lead">Cihazlarınız uzman ekibimizle ilk günkü performansına dönsün.</p>
+                    <a href="#iletisim" class="btn btn-primary btn-lg">Hemen Ara</a>
+                </div>
+            </div>
+
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="https://picsum.photos/id/3/1200/500" class="d-block w-100" alt="Yazılım">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-4 fw-bold">Yazılım & Ağ Çözümleri</h2>
+                    <p class="lead">Ofisiniz için güvenli ağ kurulumu ve lisanslı yazılım desteği.</p>
+                    <a href="#hizmetler" class="btn btn-warning btn-lg text-dark">Hizmetlerimiz</a>
+                </div>
+            </div>
+
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="https://picsum.photos/id/180/1200/500" class="d-block w-100" alt="Donanım">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-4 fw-bold">Garantili Parça Değişimi</h2>
+                    <p class="lead">Kırık ekran, batarya ve SSD değişimlerinde 2 yıl garanti.</p>
+                    <button class="btn btn-success btn-lg" data-bs-toggle="modal" data-bs-target="#fiyatModal">Fiyat Listesi</button>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#anaSlayt" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Önceki</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#anaSlayt" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Sonraki</span>
+        </button>
+    </header>
+
+    <section id="hizmetler" class="container py-5">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold display-6">Neler Yapıyoruz?</h2>
+            <p class="text-muted">Size sunduğumuz profesyonel hizmetlerden bazıları</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0 hover-effect">
+                    <img src="https://picsum.photos/id/0/500/300" class="card-img-top" alt="Yazılım">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Format & Yazılım</h5>
+                        <p class="card-text text-muted">Windows, Linux ve MacOS kurulumu, virüs temizliği ve sürücü güncellemeleri.</p>
+                        <button class="btn btn-outline-primary w-100 mt-2" data-bs-toggle="modal" data-bs-target="#fiyatModal">Fiyat Gör</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0 hover-effect">
+                    <img src="https://picsum.photos/id/20/500/300" class="card-img-top" alt="Donanım">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Parça Değişimi</h5>
+                        <p class="card-text text-muted">Kırık ekran, batarya, SSD yükseltme ve RAM değişimlerinde 2 yıl parça garantisi.</p>
+                        <button class="btn btn-outline-primary w-100 mt-2" data-bs-toggle="modal" data-bs-target="#fiyatModal">Fiyat Gör</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0 hover-effect">
+                    <img src="https://picsum.photos/id/60/500/300" class="card-img-top" alt="Network">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Ağ Kurulumu</h5>
+                        <p class="card-text text-muted">Ofis ve ev içi modem kurulumu, kablolama ve sinyal güçlendirici çözümleri.</p>
+                        <button class="btn btn-outline-primary w-100 mt-2" data-bs-toggle="modal" data-bs-target="#fiyatModal">Fiyat Gör</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="iletisim" class="bg-white py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow-lg border-0">
+                        <div class="card-body p-5">
+                            <h2 class="text-center mb-4 fw-bold">Bize Ulaşın</h2>
+                            
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Adınız Soyadınız</label>
+                                        <input type="text" class="form-control bg-light" placeholder="Örn: Ahmet Yılmaz">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Telefon Numaranız</label>
+                                        <input type="tel" class="form-control bg-light" placeholder="0555...">
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label">Hizmet Türü</label>
+                                    <select class="form-select bg-light">
+                                        <option selected>Lütfen Seçiniz...</option>
+                                        <option>Laptop Tamiri</option>
+                                        <option>Masaüstü Bilgisayar</option>
+                                        <option>Yazıcı / Çevre Birimleri</option>
+                                        <option>Yazılım Sorunları</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label">Sorununuz</label>
+                                    <textarea class="form-control bg-light" rows="4" placeholder="Cihazımdaki sorun şudur..."></textarea>
+                                </div>
+
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-primary btn-lg">Gönder</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>TeknoServis</h5>
+                    <p class="small text-secondary">
+                        Teknolojinin kalbinde, güvenilir ve hızlı çözümler sunan öncü teknik servis.
+                    </p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Hızlı Linkler</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-secondary text-decoration-none">Anasayfa</a></li>
+                        <li><a href="#hizmetler" class="text-secondary text-decoration-none">Hizmetlerimiz</a></li>
+                        <li><a href="#iletisim" class="text-secondary text-decoration-none">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>İletişim</h5>
+                    <p class="small text-secondary mb-1">📍 Merkez Mah. Teknoloji Cad. No:1</p>
+                    <p class="small text-secondary">📞 0212 555 55 55</p>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <div class="text-center small text-secondary">
+                &copy; 2025 TeknoServis Bilişim Hizmetleri. Tüm hakları saklıdır.
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="fiyatModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold">Hizmet Fiyat Listesi</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Fiyatlarımız ortalama olup, cihazın durumuna göre değişebilir.</p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Format ve Kurulum
+                            <span class="badge bg-primary rounded-pill">500 ₺</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Fan Temizliği ve Bakım
+                            <span class="badge bg-primary rounded-pill">400 ₺</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Veri Kurtarma (Başlangıç)
+                            <span class="badge bg-primary rounded-pill">1.000 ₺</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                    <a href="#iletisim" class="btn btn-success" onclick="bootstrap.Modal.getInstance(document.getElementById('fiyatModal')).hide()">Hemen Randevu Al</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
