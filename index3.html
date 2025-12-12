@@ -1,0 +1,444 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOKKA GROUPS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <style>
+        html { scroll-behavior: smooth; }
+        
+        /* Kartların üzerine gelince hafif yukarı çıkma efekti */
+        .hover-effect:hover { transform: translateY(-10px); transition: 0.7s; }
+        
+        /* Slayt resimlerinin koyuluğunu ayarlamak için (Yazılar okunsun diye) */
+        .carousel-item img {
+            filter: brightness(0.6); /* Resmi %40 karartır */
+        }
+        
+    </style>
+</head>
+
+
+
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">TOKKA HOTEL</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#anaMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="anaMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link " href="#">Anasayfa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#hizmetler">Hizmetler</a></li>
+                     <li class="nav-item"><a class="nav-link" href="#yorum">Müşteri Yorumları</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#galeri">Galeri</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#iletisim">İletişim</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="anaSlayt" class="carousel slide mt-5" data-bs-ride="carousel">
+        
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#anaSlayt" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#anaSlayt" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#anaSlayt" data-bs-slide-to="2"></button>
+        </div>
+
+        <div class="carousel-inner w-90">
+            <div class="carrousel-container">
+            <div class="carousel-item active" data-bs-interval="4000">
+                <img src="images/otel10.jpg" class="d-md-block w-100 object-fit: cover" alt="Laptop Tamiri">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-4 fw-bold ">Butik otel ayrıcalığını her detayda <p class="vurgu">hissedin.</p></h2>
+                    <p class="lead ">Konforun en özel haliyle tanışın.</p>
+                    <a href="#iletisim" class= " button1 btn btn-primary btn-lg">Hemen Rezervasyon Yaptırın</a>
+                </div>
+            </div>
+            </div>
+
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="/images/otel9.jpg" class="d-block w-100" alt="Yazılım">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-4 fw-bold ">Şimdi yerinizi ayırtın, huzur dolu bir tatilin tadını çıkarın.</h2>
+                    <p class="lead">Keyifli bir tatilin kapılarını sizin için aralıyoruz.</p>
+                    <a href="#hizmetler" class=" button2 btn btn-warning btn-lg text-dark">Hizmetlerimiz</a>
+                </div>
+            </div>
+
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="images/otel8.jpg" class="d-block w-100" alt="Donanım">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-4 fw-bold ">Sessiz, huzurlu ve modern tasarlanmış butik odalar</h2>
+                    <p class="lead">Hemen fiyat alın.</p>
+                    <button class=" button3 btn btn-success btn-lg" data-bs-toggle="modal" data-bs-target="#fiyatModal">Fiyat Listesi</button>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#anaSlayt" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Önceki</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#anaSlayt" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Sonraki</span>
+        </button>
+    </header>
+
+ <section id="hizmetler" class="container py-5">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold display-6">Size ne sunuyoruz?</h2>
+            <p class="text-muted">Tokka'da 3 çeşit oda tipi vardır.</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0 hover-effect">
+                    <img src="/images/otel2.png" class="card-img-top" alt="Yazılım">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">VIP Odalar</h5>
+                        <p class="card-text text-muted">Kendini özel hissetmek ve üstün hizmetlerden yararlanmak isteyenlerin tercihi.</p>
+                        <button class="btn btn-outline-primary w-100 mt-2" data-bs-toggle="modal" data-bs-target="#fiyatModal">Fiyat Gör</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0 hover-effect">
+                    <img src="/images/otel4.png" class="card-img-top" alt="Donanım">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Tek kişilik odalar</h5>
+                        <p class="card-text text-muted">Tatiliniz ve iş seyahatleriniz için en uygun olanı</p>
+                        <button class="btn btn-outline-primary w-100 mt-2" data-bs-toggle="modal" data-bs-target="#fiyatModal">Fiyat Gör</button>
+                    </div>
+                </div>
+            </div>
+              <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0 hover-effect">
+                    <img src="/images/aile.jpg" class="card-img-top" alt="Donanım">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Aile odaları</h5>
+                        <p class="card-text text-muted">Herşeyin en iyisini hak eden aileniz için tasarlanmış..</p>
+                        <button class="btn btn-outline-primary w-100 mt-2" data-bs-toggle="modal" data-bs-target="#fiyatModal">Fiyat Gör</button>
+                    </div>
+                </div>
+            </div>
+
+
+<section id="yorum" class="bg-light py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Misafirlerimiz Ne Diyor?</h2>
+      <p class="text-muted">1000+ Değerlendirme</p>
+    </div>
+
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- Carousel item 1 -->
+        <div class="carousel-item active">
+          <div class="row justify-content-center">
+            <div class="col-md-4 mb-3">
+              <div class="card h-100 shadow-sm border-0 text-center p-3">
+                <div class="avatar mb-3">
+                  <img src="images/profil2.png" class="rounded-circle" width="80" height="80" alt="Samantha Kate">
+                </div>
+                <div class="stars mb-2 text-warning fs-5">★★★★★</div>
+                <p class="text-muted fst-italic">"VIP odada kaldık, her detay düşünülmüş. Kendinizi özel hissediyorsunuz."</p>
+                <h5 class="fw-bold mb-0">Ben Jason Mueller</h5>
+                <small class="text-secondary">Yazılım uzmanı</small>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+              <div class="card h-100 shadow-sm border-0 text-center p-3">
+                <div class="avatar mb-3">
+                  <img src="images/profil2.png" class="rounded-circle" width="80" height="80" alt="Murat T.">
+                </div>
+                <div class="stars mb-2 text-warning fs-5">★★★★★</div>
+                <p class="text-muted fst-italic">"Ailemle geçirdiğimiz tatil unutulmazdı. Odalar çok rahat ve atmosfer sıcacık."</p>
+                <h5 class="fw-bold mb-0">Murat T.</h5>
+                <small class="text-secondary">Halkla İlişkiler Uzmanı</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel item 2 -->
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-md-4 mb-3">
+              <div class="card h-100 shadow-sm border-0 text-center p-3">
+                <div class="avatar mb-3">
+                  <img src="images/profil2.png" class="rounded-circle" width="80" height="80" alt="Elif K.">
+                </div>
+                <div class="stars mb-2 text-warning fs-5">★★★★★</div>
+                <p class="text-muted fst-italic">"Konum mükemmel, kahvaltı harikaydı. Tekrar geleceğim kesin!"</p>
+                <h5 class="fw-bold mb-0">Elif K.</h5>
+                <small class="text-secondary">Moda Tasarımcısı</small>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+              <div class="card h-100 shadow-sm border-0 text-center p-3">
+                <div class="avatar mb-3">
+                  <img src="images/profil2.png" class="rounded-circle" width="80" height="80" alt="Ahmet Y.">
+                </div>
+                <div class="stars mb-2 text-warning fs-5">★★★★★</div>
+                <p class="text-muted fst-italic">"Her şey harikaydı, personel çok güler yüzlü ve odalar çok temizdi."</p>
+                <h5 class="fw-bold mb-0">Ahmet Y.</h5>
+                <small class="text-secondary">Güvenlik sistemleri elemanı</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Carousel controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bg-dark rounded-circle p-3"></span>
+        <span class="visually-hidden">Önceki</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon bg-dark rounded-circle p-3"></span>
+        <span class="visually-hidden">Sonraki</span>
+      </button>
+    </div>
+  </div>
+</section>
+<section id="galeri" class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Galeri</h2>
+      <p class="text-muted">Butik otelimizin en özel anlarından bazı kareler</p>
+    </div>
+
+    <div class="row g-3">
+      <div class="col-6 col-md-4 col-lg-3">
+        <img src="images/deneme6.jpg" class="img-fluid rounded shadow-sm" alt="Oda 1">
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <img src="images/deneme11.jpg" class="img-fluid rounded shadow-sm" alt="Oda 2">
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <img src="images/deneme8.jpg" class="img-fluid rounded shadow-sm" alt="Oda 3">
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <img src="images/deneme9.jpg" class="img-fluid rounded shadow-sm" alt="Oda 4">
+      </div>
+        <div class="col-6 col-md-4 col-lg-3">
+        <img src="images/deneme10.jpg" class="img-fluid rounded shadow-sm" alt="Oda 2">
+      </div>
+        <div class="col-6 col-md-4 col-lg-3">
+        <img src="images/deneme12.jpg" class="img-fluid rounded shadow-sm" alt="Oda 2">
+      </div>
+        <div class="col-6 col-md-4 col-lg-3">
+        <img src="images/deneme13.jpg" class="img-fluid rounded shadow-sm" alt="Oda 2">
+      </div>
+        <div class="col-6 col-md-4 col-lg-3">
+        <img src="images/deneme14.jpg" class="img-fluid rounded shadow-sm" alt="Oda 2">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5 bg-light" id="otel-hakkinda">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <img src="/images/deneme7.jpg" class="img-fluid rounded shadow-lg" alt="Butik Otel Görüntüsü">
+            </div>
+
+            <div class="col-lg-6">
+                <h2 class="display-5 fw-bold text-dark mb-5">Eşsiz Bir Deneyim Sizi Bekliyor</h2>
+                <p class="lead text-muted mb-2">Butik otelimiz hakkında..</p>
+                <div class="row">Tokka Hotel, şehrin karmaşasından uzak, sakin ve huzurlu bir konaklama deneyimi sunmak için tasarlandı. Modern tasarım anlayışıyla döşenmiş odalarımız, samimi ve kişisel hizmet anlayışımızla birleşerek size evinizde hissettirecek bir ortam yaratıyor.
+
+Her ayrıntının özenle düşünüldüğü butik otelimizde, kendinizi özel hissetmeniz için geniş imkanlar sağlıyoruz. Lezzetli kahvaltımız, güler yüzlü personelimiz ve merkezi konumumuz sayesinde hem iş seyahatlerinizde hem de tatil planlarınızda ideal bir tercih olacaksınız.
+
+Tokka Hotel’de konaklarken; konfor, kalite ve sıcaklığı bir arada bulacaksınız. Siz de bu ayrıcalığı yaşamak ve unutulmaz anılar biriktirmek için hemen rezervasyon yaptırabilirsiniz. </div>
+
+                <a href="#rezervasyon-formu" class="btn btn-primary btn-lg mt-5">Hemen Rezervasyon Yapın</a>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<section class="py-5" id="rezervasyon-formu">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h3 class="text-center mb-4 fw-bold">Rezervasyonunuzu Şimdi Yapın</h3>
+                <p class="text-center text-muted mb-5">Oda tipleri, kişi sayısı ve tarihleri seçerek müsaitliği kontrol edin.</p>
+
+                <form action="[Formun Gönderileceği Sunucu Yolu]" method="POST" class="p-4 border rounded shadow-sm bg-white">
+                    <div class="row g-3">
+                        
+                        <div class="col-md-6">
+                            <label for="girisTarihi" class="form-label">Giriş Tarihi</label>
+                            <input type="date" class="form-control" id="girisTarihi" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="cikisTarihi" class="form-label">Çıkış Tarihi</label>
+                            <input type="date" class="form-control" id="cikisTarihi" required>
+                        </div>
+
+                        <div class="col-md-4">
+                            <label for="yetiskinSayisi" class="form-label">Yetişkin</label>
+                            <select class="form-select" id="yetiskinSayisi" required>
+                                <option value="" disabled selected>Seçiniz</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4+</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="cocukSayisi" class="form-label">Çocuk (0-12 Yaş)</label>
+                            <select class="form-select" id="cocukSayisi">
+                                <option value="0" selected>0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                            </select>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <label for="odaTipi" class="form-label">Tercih Edilen Oda Tipi</label>
+                            <select class="form-select" id="odaTipi">
+                                <option value="" disabled selected>Seçiniz</option>
+                                <option value="standart">Tek kişilik oda</option>
+                                <option value="deluxe">Aile Odaları</option>
+                                <option value="aile">VIP Oda</option>
+                            </select>
+                        </div>
+                        
+                        <div class="col-12">
+                            <label for="emailAdresi" class="form-label">E-posta Adresiniz</label>
+                            <input type="email" class="form-control" id="emailAdresi" placeholder="ornek@mail.com" required>
+                        </div>
+
+                        <div class="col-12 mt-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gizlilik" required>
+                                <label class="form-check-label small" for="gizlilik">
+                                    <a href="https://camsanordu.com/kurumsal/web-sitesi-gizlilik-sozlesmesi" target="_blank">Gizlilik politikası</a> ve <a href="https://sartlar.com/kullanim-kosullari-ornegi/" target="_blank">kullanım şartlarını</a> okudum ve kabul ediyorum.
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary btn-lg w-100">Müsaitliği Kontrol Et ve Rezervasyon Yap</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    </section>
+
+   
+
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 text-primary">
+                    <h5>Tokka Hotel</h5>
+                    <p class="small text-secondary">
+                        Eşsiz hizmet kalitemizle tatiliniz veya iş seyahatiniz için mükemmel bir adresiz.
+                    </p>
+                      <div class="col-lg-6 mb-4">
+                <h5 class="text-uppercase fw-bold mb-3 text-primary">Konumumuz</h5>
+                
+                <div class="map-container rounded shadow-lg">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d306.9032596956621!2d31.60331005703714!3d36.545934149842616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c1a268f7d98305%3A0xc68d1f70d5a3d0f0!2sAlanya%2C%20Antalya%2C%20T%C3%BCrkiye!5e0!3m2!1str!2sus!4v1709299402511!5m2!1str!2sus"
+                        width="100%" 
+                        height="300" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Otel Konumu Haritası">
+                    </iframe>
+                </div>
+            </div>
+
+                </div>
+                <div class="col-md-4 mb-4 text-primary">
+                    <h5>Hızlı Linkler</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-secondary text-decoration-none">Anasayfa</a></li>
+                        <li><a href="#hizmetler" class="text-secondary text-decoration-none">Hizmetlerimiz</a></li>
+                        <li><a href="#iletisim" class="text-secondary text-decoration-none">İletişim</a></li>
+                        <li><a href="#yorum" class="text-secondary text-decoration-none">Misafirlerimizin yorumları</a></li>
+                        <li><a href="#galeri" class="text-secondary text-decoration-none">Galeri</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-4 mb-4 ">
+                    <h5>İletişim</h5>
+                    <p class="small text-secondary mb-1">📍Güller Pınarı, Yenilmez Cd. no:8,07460 Alanya/ANTALYA</p>
+                    <p class="small text-secondary">📞 0212 660 60 07</p>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <div class="text-center small text-secondary">
+                &copy; 2025 TOKKA Hotel Groups Tüm hakları saklıdır.
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="fiyatModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold">Hizmet Fiyat Listesi</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Bizi tercih ettiğiniz için teşekkür ederiz..</p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Tek Kişilik Odalarımız
+                            <span class="badge bg-primary rounded-pill">1.299 ₺</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Aile Odalarımız
+                            <span class="badge bg-primary rounded-pill">1.999 ₺</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            VIP Odalarımız
+                            <span class="badge bg-primary rounded-pill">2.799 ₺</span>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                    <a href="#iletisim" class="btn btn-success" onclick="bootstrap.Modal.getInstance(document.getElementById('fiyatModal')).hide()">Hemen Randevu Al</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
